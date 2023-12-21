@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hospital Management System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h2>HOSPITAL DATA MANAGEMENT</h2>
+	</div>
+
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<h3 class="card-header">Add Doctor</h3>
+				<form>
+					<label for="doctorName">Doctor's Name:</label><br>
+					<input type="text" id="doctorName" name="doctorName"><br>
+					<label for="doctorSpeciality">Doctor's Speciality:</label><br>
+					<input type="text" id="doctorSpeciality" name="doctorSpeciality"><br><br>
+					<input type="button" value="Submit" class="button" onclick="addDoctor()">
+					<p id="doctorMessage"></p>
+				</form>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<h3 class="card-header">New Registration</h3>
+				<form>
+					<label for="patientName">Patient's Name:</label><br>
+					<input type="text" id="patientName" name="patientName"><br>
+					<label for="contactNo">Contact No:</label><br>
+					<input type="text" id="contactNo" name="contactNo"><br>
+					<label for="illness">Sickness:</label><br>
+					<input type="text" id="illness" name="illness"><br>
+					<label for="registrationDate">Registration Date:</label><br>
+					<input type="date" id="registrationDate" name="registrationDate"><br><br>
+					<input type="button" value="Submit" class="button" onclick="registerPatient()">
+					<p id="patientMessage"></p>
+				</form>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<h3 class="card-header">Previous Record</h3>
+				<form>
+					<label for="patientSearch">Search Patient:</label><br>
+					<input type="text" id="patientSearch" name="patientSearch"><br><br>
+					<input type="button" value="Search" class="button" onclick="searchPatient()">
+				</form>
+				<div id="patientDetails"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
