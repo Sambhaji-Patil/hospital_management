@@ -1,15 +1,12 @@
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
-	background: linear-gradient(to bottom, #0db670, #79b3bb);
+	background: linear-gradient(to bottom, #54cf9e, #a5d7dd);
 }
 
 .header {
-	padding: 10px;
-	text-align: center;
-	background: #dbeb4d;
-	color: rgb(35, 61, 60);
-	font-size: 30px;
+	padding: 1px;
 	border-radius: 10px;
 }
 
@@ -42,7 +39,7 @@ body {
 }
 
 .card-header {
-	background-color: #286188;
+	background-color: #2883c0;
 	color: white;
 	padding: 10px;
 	margin-bottom: 20px;
