@@ -1,9 +1,9 @@
 // Updated list of doctor specialities with associated symptoms
 var specialities = {
-    "Cardiologists": ["heart", "blood vessels", "heart failure", "heart attack", "high blood pressure", "irregular heartbeat", "breathlessness"],
-    "Dermatologists": ["skin", "hair", "nails", "scars", "acne", "skin allergies"],
-    "Gastroenterologists": ["stomach pain", "bowels", "pancreas", "liver", "gallbladder", "abdominal pain", "ulcers", "diarrhea", "jaundice", "colon cancer"],
-    "Psychiatrists": ["mental stress", "emotional", "addictive disorders", "depression", "schizophrenia", "substance abuse", "anxiety disorders"]
+    "Cardiologist": ["heart", "blood vessels", "heart failure", "heart attack", "high blood pressure", "irregular heartbeat", "breathlessness"],
+    "Dermatologist": ["skin", "hair", "nails", "scars", "acne", "skin allergies"],
+    "Gastroenterologist": ["stomach pain", "bowels", "pancreas", "liver", "gallbladder", "abdominal pain", "ulcers", "diarrhea", "jaundice", "colon cancer"],
+    "Psychiatrist": ["mental stress", "emotional", "addictive disorders", "depression", "schizophrenia", "substance abuse", "anxiety disorders"]
 };
 
 // Add Doctor
