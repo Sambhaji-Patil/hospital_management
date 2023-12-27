@@ -1,3 +1,11 @@
+// Updated list of doctor specialities with associated symptoms
+var specialities = {
+    "Cardiologists": ["heart", "blood vessels", "heart failure", "heart attack", "high blood pressure", "irregular heartbeat", "breathlessness"],
+    "Dermatologists": ["skin", "hair", "nails", "scars", "acne", "skin allergies"],
+    "Gastroenterologists": ["stomach pain", "bowels", "pancreas", "liver", "gallbladder", "abdominal pain", "ulcers", "diarrhea", "jaundice", "colon cancer"],
+    "Psychiatrists": ["mental stress", "emotional", "addictive disorders", "depression", "schizophrenia", "substance abuse", "anxiety disorders"]
+};
+
 // Add Doctor
 var doctors = [];
 function addDoctor() {
@@ -18,21 +26,17 @@ function addDoctor() {
 }
 
 // New Registration
-var patients = [];
+var patients=[];
 function registerPatient() {
     var patientName = document.getElementById("patientName").value;
     var contactNo = document.getElementById("contactNo").value;
     var illness = document.getElementById("illness").value;
     var registrationDate = document.getElementById("registrationDate").value;
-    console.log("Patient Name: " + patientName);
-    console.log("Contact No: " + contactNo);
-    console.log("Illness: " + illness);
-    console.log("Registration Date: " + registrationDate);
 
     var assignedDoctor = "";
-    for (var i = 0; i < doctors.length; i++) {
-        if (doctors[i].speciality == illness) {
-            assignedDoctor = doctors[i].name;
+    for (var speciality in specialities) {
+        if (specialities[speciality].includes(illness)) {
+            assignedDoctor = getDoctorBySpeciality(speciality);
             break;
         }
     }
@@ -54,6 +58,16 @@ function registerPatient() {
         patientMessage.innerHTML = "";
         patientMessage.classList.remove("blink-yellow");
     }, 2000);
+}
+
+// Helper function to get a doctor's name by speciality
+function getDoctorBySpeciality(speciality) {
+    for (var i = 0; i < doctors.length; i++) {
+        if (doctors[i].speciality === speciality) {
+            return doctors[i].name;
+        }
+    }
+    return "";
 }
 
 // Previous Record
