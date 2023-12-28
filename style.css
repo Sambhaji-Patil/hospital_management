@@ -99,5 +99,18 @@ input[type=text], input[type=date] {
 	animation: blink-yellow 2s;
 }
 
+/* Additional styling for horizontal alignment */
+.row {
+	display: flex; /* Use flexbox for horizontal alignment */
+	justify-content: space-between; /* Distribute space between columns */
+}
 
+/* Styling for search results box */
+.search-results-box {
+	border: 3px solid #3d76c2; /* Add a border around the box */
+	padding: 10px; /* Add padding for better visual appeal */
+	width: 80%; /* Adjust the width as needed */
+	margin: 20px auto; /* Center the box on the page */
+	text-align: left; /* Align text to the left within the box */
+}
   
