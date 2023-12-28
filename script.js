@@ -26,7 +26,7 @@ function addDoctor() {
 }
 
 // New Registration
-var patients=[];
+var patients = [];
 function registerPatient() {
     var patientName = document.getElementById("patientName").value;
     var contactNo = document.getElementById("contactNo").value;
@@ -78,21 +78,21 @@ function searchPatient() {
     patientDetails.innerHTML = "";
     var patientRecord = "";
     for (var i = 0; i < patients.length; i++) {
-        if (patients[i].name == patientName) {
+        if (patients[i].name.toLowerCase() === patientName.toLowerCase()) {
             patientRecord =
-                "Patient Name: " +
+                "<b>Patient Name:</b> " +
                 patients[i].name +
-                "<br>" +
-                "Contact No: " +
+                "<br>" + "<br>" +
+                "<b>Contact No:</b> " +
                 patients[i].contactNo +
-                "<br>" +
-                "Symptoms: " +
+                "<br>" + "<br>" +
+                "<b>Symptoms:</b> " +
                 patients[i].illness +
-                "<br>" +
-                "Registration Date: " +
+                "<br>" + "<br>" +
+                "<b>Registration Date:</b> " +
                 patients[i].registrationDate +
-                "<br>" +
-                "Assigned Doctor: " +
+                "<br>" + "<br>" +
+                "<b>Assigned Doctor:</b> " +
                 patients[i].assignedDoctor;
             break;
         }
