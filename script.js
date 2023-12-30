@@ -1,3 +1,7 @@
+// Initialize the doctors and patients arrays from local storage
+var doctors = JSON.parse(localStorage.getItem('doctors')) || [];
+var patients = JSON.parse(localStorage.getItem('patients')) || [];
+
 // Updated list of doctor specialities with associated symptoms
 var specialities = {
     "Cardiologist": ["heart", "blood vessels", "heart failure", "heart attack", "high blood pressure", "irregular heartbeat", "breathlessness"],
@@ -14,6 +18,8 @@ function addDoctor() {
     console.log("Doctor Name: " + doctorName);
     console.log("Doctor Speciality: " + doctorSpeciality);
     doctors.push({ name: doctorName, speciality: doctorSpeciality });
+    // Save doctors array to local storage
+    localStorage.setItem('doctors', JSON.stringify(doctors));
     var doctorMessage = document.getElementById("doctorMessage");
     doctorMessage.innerHTML = "Doctor Added";
     doctorMessage.classList.add("blink-yellow"); // Add blink effect
@@ -48,6 +54,9 @@ function registerPatient() {
         registrationDate: registrationDate,
         assignedDoctor: assignedDoctor
     });
+
+    // Save patients array to local storage
+    localStorage.setItem('patients', JSON.stringify(patients));
 
     var patientMessage = document.getElementById("patientMessage");
     patientMessage.innerHTML = "Patient Registered successfully";
