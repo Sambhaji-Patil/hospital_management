@@ -4,12 +4,16 @@
 	<title>Hospital Management System</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
+	
 </head>
 <body>
+	<div class="container">
 	<div class="header">
-		<img src="header.png" height="250" width="100%"  alt="Hospital Data Management Image">
+		<img src="header.png" height="250" width="100%" alt="Hospital Data Management Image">
+		<br>
 	</div>
-	
+	<br>
+	<hr width="650">
 	<div class="row">
 		<div class="column">
 			<div class="card">
@@ -42,7 +46,10 @@
 				</form>
 			</div>
 		</div>
+	
+	
 
+	
 		<div class="column">
 			<div class="card">
 				<h3 class="card-header">Previous Record</h3>
@@ -54,8 +61,38 @@
 				<div id="patientDetails" class="search-results-box"></div>
 			</div>
 		</div>
-	</div>
+		</div>
+		<br>
+<hr width="650">
+		<!-- Search Doctor-Patient List Section -->
+		<div class="row">
+		<div class="column">
+    	<div class="card">
+        <h3 class="card-header">Search Doctor-Patient List</h3>
+        <form>
+            <label for="doctorSearch">Search Doctor:</label><br>
+            <input type="text" id="doctorSearch" name="doctorSearch"><br><br>
+            <input type="button" value="Search" class="button" onclick="searchDoctorPatientList()">
+        </form>
+        <div class="table-container">
+            <table id="doctorPatientList" class="search-results-box">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone No.</th>
+                        <th>Registration Date</th>
+                        <th>Symptoms</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        	</div>
+        
+    		</div>
+		</div>
+</div>
 
+</div>
 	<script src="script.js"></script>
 </body>
 </html>
