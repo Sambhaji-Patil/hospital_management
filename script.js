@@ -99,3 +99,25 @@ function searchPatient() {
     }
     patientDetails.innerHTML = patientRecord;
 }
+
+// Search Doctor-Patient List
+function searchDoctorPatientList() {
+    var doctorName = document.getElementById("doctorSearch").value.toLowerCase();
+    var doctorPatientList = document.getElementById("doctorPatientList").getElementsByTagName("tbody")[0];
+    doctorPatientList.innerHTML = ""; // Clear the previous content
+
+    for (var i = 0; i < patients.length; i++) {
+        if (patients[i].assignedDoctor.toLowerCase() === doctorName) {
+            var row = doctorPatientList.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+
+            cell1.innerHTML = patients[i].name;
+            cell2.innerHTML = patients[i].contactNo;
+            cell3.innerHTML = patients[i].registrationDate;
+            cell4.innerHTML = patients[i].illness;
+        }
+    }
+}
