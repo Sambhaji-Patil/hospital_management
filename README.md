@@ -1,4 +1,5 @@
 # hospital_management
+Link: https://samcreates.github.io/hospital_management/
 Website for hospital mannagement
 The Hospital Management System (HMS) is a
 comprehensive software project designed to enhance
